@@ -9,3 +9,4 @@ var result = inchToFeet(inch);
 console.log(result);
 
 //Inch to feet
+
