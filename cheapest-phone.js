@@ -1,3 +1,5 @@
+// Find the cheapest item
+
 const phones = [
     {
         name: 'samsung A50',

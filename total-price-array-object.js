@@ -1,3 +1,5 @@
+//Find total price using array object
+
 const products = [
     {name:'laptop' , price: 93000},
     {name:'watch' , price: 3000},
