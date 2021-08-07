@@ -1,5 +1,5 @@
-// Wood Calculator
 
+// Wood Calculator
 
 function woodCalculator(tableQuantity,chairQuantity,bedQuantity) {
 
