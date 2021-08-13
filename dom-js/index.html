@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document object model</title>
+</head>
+<body>
+    <header>
+
+    </header>
+    <main>
+        <h2>Friends</h2>
+        <ul id="friends">
+            <li>my-friend - 1</li>
+            <li>my-friend - 2</li>
+            <li>my-friend - 3</li>
+            <li>my-friend - 4</li>
+            <li>my-friend - 5</li>
+            <li>my-friend - 6</li>
+            <li>my-friend - 7</li>
+            <li>my-friend - 8</li>
+            <li>my-friend - 9</li>
+            <li>my-friend - 10</li>
+        </ul>
+        <section>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum corporis, doloribus esse consectetur inventore facilis nemo optio dolores ab omnis dolor iusto exercitationem aspernatur dolorem explicabo aliquid accusantium qui nam.</p>
+            <p>Eos, voluptas sequi et nesciunt illo tenetur nemo consequatur voluptates quos tempora, aspernatur aliquid, architecto veniam molestiae amet corrupti officiis ducimus? Deserunt, voluptatibus tempora! Dolorum possimus exercitationem laborum officia. Tempora?</p>
+            <p>Est, mollitia quidem voluptatibus nesciunt molestias natus quaerat esse! Delectus numquam rem quam! Itaque voluptas fugiat, voluptatem ipsam nam maiores possimus est iste quisquam, delectus laborum adipisci eum illo commodi.</p>
+            <p>Necessitatibus quisquam, placeat in temporibus sequi fugit qui nesciunt. Hic doloremque accusamus quibusdam inventore illum incidunt cupiditate corrupti unde deleniti sint, debitis neque labore magnam maiores, aperiam ad, tenetur libero.</p>
+            <p>Ipsum consequuntur eum mollitia amet voluptas dicta necessitatibus quasi ad, praesentium eius ducimus, maiores quod nesciunt laudantium enim distinctio ut nisi repellendus reprehenderit perferendis. Ea vitae deserunt assumenda quas neque.</p>
+        </section>
+
+        <section> 
+            <h2>Event listener</h2>
+            <button onclick="makeRed()">click me</button>
+            <button id="blueBtn">click btn : blue</button>
+        </section>
+
+        <section>
+            <p id="paragraph-added"></p>
+            <button id="addBtn">Add here</button>
+        </section>
+
+    </main>
+    <script>
+            const blogs = document.getElementsByTagName('p');
+            for (blog of blogs){
+                blog.style.backgroundColor = 'purple';
+                blog.style.color = '#fff';
+                blog.style.fontSize = '30px';
+                blog.innerHTML = `
+                <h4>hello<h4>
+                <ul>
+                <li> ronim</li>
+                <li> sonim</li>
+                <li> gonim</li>
+                <li> honim</li>
+                </ul>
+                `
+            }
+            //remove item
+            const friends = document.getElementById('friends');
+            console.log(friends.childNodes);
+            const fifth = friends.children[4];
+            console.log(fifth);
+            friends.removeChild(fifth);
+
+            //added item
+            const li = document.createElement('li');
+            li.innerText = 'my-friend 11';
+            friends.appendChild(li);
+
+            //Event listener
+            function  makeRed() {
+            document.body.style.backgroundColor = 'red'; 
+            }
+
+            const bluebtn = document.getElementById('blueBtn');
+            bluebtn.onclick = function () {
+                document.body.style.backgroundColor = 'blue';
+            }
+
+            //added text 
+            const paragraph = document.getElementById('paragraph-added');
+            console.log(paragraph);
+
+            const addBtn = document.getElementById('addBtn');
+
+            addBtn.addEventListener('click', function addText(){
+                paragraph.innerText= ' hello how are you';
+            })
+
+    </script>
+    
+</body>
+</html>
