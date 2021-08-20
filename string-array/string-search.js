@@ -1,49 +1,38 @@
-//indexOf with search
 const products = [
-    'Lenovo Laptop',
-    'Hp laptop',
-    'singer Laptop',
-    'Dell laptop',
-    'Samsung phone',
-    'Xiaomi Phone',
-    'Lg LaPtoP',
-    'Apple Iphone'
-]
+    'Dell hardcore i29 200GB laptop',
+    'iphone 1TB camera flashlight Phone',
+    'yellow laptop with black camera',
+    'Dell 1X59 Lenovo commercial yoga laptop',
+    'LG supernova laptop Dell',
+    'HTC low price Phone',
+    'Dell purple color phone with Laptop'
+];
 
-const search = 'laptop';
-const laptop = [];
-for(product of products){
-    if(product.toLowerCase().indexOf(search.toLowerCase()) != -1){
-        laptop.push(product);
+const searching = 'dell';
+
+// indexOf
+
+const output = [];
+for (const product of products) {
+    if (product.toLowerCase().indexOf(searching.toLowerCase()) != -1) {
+        // output.push(product);
     }
 }
-// console.log(laptop);
 
-const newProducts = [
-    'Lenovo Laptop',
-    'Hp laptop',
-    'singer Laptop',
-    'Dell laptop',
-    'Samsung phone',
-    'Xiaomi Phone',
-    'Lg LaPtoP',
-    'dell Apple Iphone'
-]
-//using includes()
-const phone = [];
-for( item of newProducts){
-    if(item.includes('phone')){
-        phone.push(item);
+// console.log(output);
+for (const product of products) {
+    if (product.toLowerCase().includes(searching.toLowerCase())) {
+        // output.push(product);
     }
 }
-// console.log(phone);
 
-//startsWith 
-const element = [];
-const find = 'hp';
-for(gadget of products){
-  if(gadget.toLowerCase().startsWith(find.toLowerCase())){
-      element.push(gadget);
-  }
+console.log(output);
+
+//starts with
+for (const product of products) {
+    if (product.toLowerCase().startsWith(searching.toLowerCase())) {
+        output.push(product);
+    }
 }
-console.log(element);
+
+console.log(output)
